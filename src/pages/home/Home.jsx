@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { v4 } from 'uuid';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap-trial/ScrollTrigger';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 import { services } from '../../utilities';
 import {
   team,
@@ -14,7 +13,7 @@ import {
   herobg1,
   herobg2,
 } from '../../assets/index';
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   useGSAP(() => {
     let t1 = gsap.timeline();
