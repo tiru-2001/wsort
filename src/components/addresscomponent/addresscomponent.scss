@@ -1,0 +1,62 @@
+@import '../../globalscss/global.scss';
+.contact_sections {
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  padding: 50px;
+  width: 80%;
+  border: 1px solid grey;
+  @include flex(row, null, start, 50px);
+  @include responsive(1000px) {
+    @include flex(column, null, start, 50px);
+  }
+  @include responsive(767px) {
+    width: 95%;
+    gap: 30px;
+  }
+  @include responsive(550px) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .img_section {
+    flex: 1;
+
+    img {
+      margin: 0px;
+      border-radius: 5px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+  .address_section {
+    @include flex(column, null, null, 10px);
+    padding: 10px;
+    flex: 1;
+    h2 {
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--main_color);
+      text-align: start;
+      @include responsive(550px) {
+        font-size: 2.5rem;
+      }
+      @include responsive(300px) {
+        font-size: 2rem;
+      }
+    }
+    ul {
+      list-style-type: circle;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: var(--main_color);
+      color: white;
+      border-radius: 20px;
+      outline: none;
+      font-size: 1.3rem;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

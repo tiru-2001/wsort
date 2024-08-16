@@ -1,0 +1,9 @@
+@import '../../globalscss/global.scss';
+.parent_maincontainer {
+  main {
+    border: red;
+    min-height: 100vh;
+    @include flex(column, space-between, null, 0px);
+    position: relative;
+  }
+}

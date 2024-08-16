@@ -1,0 +1,209 @@
+@import '../../globalscss/global.scss';
+.service {
+  @include flex(column, null, null, 20px);
+
+  background: linear-gradient(to right, #bdc3c7, #687079);
+  span {
+    color: rgb(19, 47, 48);
+    font-style: italic;
+  }
+  .service_section1 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    @include responsive(300px) {
+      height: 60vh;
+    }
+    .top {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 9;
+      @include flex(row, center, center, 0px);
+      h1 {
+        font-size: 5rem;
+        @include responsive(767px) {
+          font-size: 4rem;
+        }
+        @include responsive(400px) {
+          font-size: 3rem;
+        }
+        @include responsive(300px) {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+      }
+    }
+    .bottom {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -40%;
+      border-radius: 50%;
+      height: 500px;
+      width: 500px;
+      backdrop-filter: blur(5px);
+      background-color: rgba(222, 212, 212, 0.644);
+      @include responsive(767px) {
+        height: 400px;
+        width: 400px;
+      }
+      @include responsive(400px) {
+        height: 300px;
+        width: 300px;
+      }
+      @include responsive(300px) {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+  .service_section2 {
+    @include flex(column, null, null, 60px);
+    @include responsive(627px) {
+      margin-bottom: 200px;
+    }
+    @include responsive(377px) {
+      margin-bottom: 400px;
+    }
+    @include responsive(267px) {
+      margin-bottom: 600px;
+    }
+    @include responsive(225px) {
+      margin-bottom: 800px;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      @include responsive(627px) {
+        font-size: 2.3rem;
+      }
+    }
+    .bottom {
+      flex: 1;
+      @include responsive(627px) {
+        @include flex(column, null, null, 60px);
+      }
+
+      .even_item {
+        @include flex(row-reverse, null, center, 0px);
+        @include responsive(627px) {
+          @include flex(column, null, center, 0px);
+        }
+        .left {
+          flex: 1;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            box-shadow: 3px -3px 5px rgb(88, 85, 85);
+            @include responsive(627px) {
+              width: 70%;
+
+              float: right;
+              height: 300px;
+              object-fit: cover;
+            }
+            @include responsive(317px) {
+              width: 100%;
+            }
+          }
+        }
+        .right {
+          text-align: center;
+          flex: 1;
+          @include flex(column, center, center, 20px);
+          @include responsive(627px) {
+            @include flex(column, null, start, 10px);
+            padding: 10px;
+          }
+
+          h2 {
+            font-size: 2.1rem;
+            color: rgb(19, 47, 48);
+            @include responsive(627px) {
+              font-size: 1.9rem;
+            }
+          }
+          p {
+            width: 70%;
+            font-size: 1.2rem;
+            line-height: 32px;
+            text-align: justify;
+            @include responsive(627px) {
+              line-height: 24px;
+            }
+            @include responsive(317px) {
+              width: 100%;
+              font-size: 1rem;
+              padding: 5px;
+            }
+          }
+        }
+      }
+      .odd_item {
+        @include flex(row, null, center, 0px);
+        @include responsive(627px) {
+          @include flex(column, null, center, 0px);
+        }
+        .left {
+          flex: 1;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            box-shadow: 3px -3px 5px rgb(88, 85, 85);
+            @include responsive(627px) {
+              width: 60%;
+              align-self: flex-end;
+              float: right;
+              height: 300px;
+              object-fit: cover;
+            }
+            @include responsive(317px) {
+              width: 100%;
+            }
+          }
+        }
+        .right {
+          text-align: center;
+          flex: 1;
+          @include flex(column, center, center, 20px);
+          @include responsive(627px) {
+            @include flex(column, null, start, 10px);
+            padding: 10px;
+          }
+
+          h2 {
+            font-size: 2.1rem;
+            color: rgb(19, 47, 48);
+            @include responsive(627px) {
+              font-size: 1.9rem;
+            }
+          }
+          p {
+            width: 70%;
+            font-size: 1.2rem;
+            line-height: 32px;
+            text-align: justify;
+            @include responsive(627px) {
+              line-height: 24px;
+            }
+            @include responsive(317px) {
+              width: 100%;
+              font-size: 1rem;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .service_section3 {
+    height: 100vh;
+  }
+}

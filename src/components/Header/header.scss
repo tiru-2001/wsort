@@ -1,0 +1,61 @@
+@import '../../globalscss/global.scss';
+header {
+  @include flex(row, space-between, center, 0px);
+  height: 90px;
+  padding: 10px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: transparent;
+  @include responsive(900px) {
+    padding: 10px;
+  }
+  .mobile_nav {
+    display: none;
+    position: relative;
+
+    @include responsive(900px) {
+      display: flex;
+    }
+    .toggle_menu {
+      border-radius: 10px;
+
+      background: linear-gradient(to right, #ffefba, #ffffff);
+      position: absolute;
+      padding: 20px;
+      top: 20px;
+      right: -10px;
+      height: 90vh;
+      width: 60vw;
+      @include flex(column, center, center, 0px);
+      .top {
+        align-self: end;
+      }
+      .bottom {
+        @include flex(column, center, center, 30px);
+
+        flex: 1;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 60%;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+  nav {
+    @include flex(row, center, center, 50px);
+    .active {
+      color: rgb(8, 33, 123);
+      font-weight: 600;
+    }
+    @include responsive(900px) {
+      display: none;
+    }
+  }
+}

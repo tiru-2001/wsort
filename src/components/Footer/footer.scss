@@ -1,0 +1,47 @@
+@import '../../globalscss/global.scss';
+footer {
+  box-shadow: 0px -3px 15px 0px gray;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 50px;
+  @include flex(column, null, null, 10px);
+
+  @include responsive(767px) {
+    padding: 10px;
+  }
+  .footer_top {
+    @include flex(row, start, null, 150px);
+
+    @include responsive(1050px) {
+      gap: 30px;
+    }
+    @include responsive(767px) {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .footertop_childs {
+      @include flex(column, start, null, 20px);
+
+      h3 {
+        font-size: 1.2rem;
+        line-height: 30px;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: 24px;
+        width: 80%;
+      }
+      .quick_links {
+        @include flex(column, null, null, 10px);
+      }
+      .social_media {
+        @include flex(row, null, null, 10px);
+      }
+      .footerlink {
+        text-decoration: underline;
+      }
+    }
+  }
+}
