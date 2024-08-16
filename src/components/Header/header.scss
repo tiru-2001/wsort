@@ -10,18 +10,16 @@ header {
   z-index: 99;
   background-color: transparent;
   @include responsive(900px) {
-    padding: 10px;
+    padding: 10px 20px;
   }
   .mobile_nav {
     display: none;
     position: relative;
-
     @include responsive(900px) {
       display: flex;
     }
     .toggle_menu {
       border-radius: 10px;
-
       background: linear-gradient(to right, #ffefba, #ffffff);
       position: absolute;
       padding: 20px;

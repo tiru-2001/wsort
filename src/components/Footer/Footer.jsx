@@ -24,7 +24,7 @@ const Footer = () => {
           </p>
         </section>
         <section className="footertop_childs">
-          <h3>quick &nbsp; links</h3>
+          <h3>quick links</h3>
           <section className="quick_links">
             {navLinks.map((item) => (
               <Link className="footerlink link" key={item.id} to={item.path}>
