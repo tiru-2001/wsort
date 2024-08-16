@@ -4,7 +4,6 @@ import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap-trial/ScrollTrigger';
 import { services_page } from '../../utilities';
 gsap.registerPlugin(ScrollTrigger);
-
 const Services = () => {
   useGSAP(() => {
     gsap.to('.service_section1 .bottom', {
@@ -23,7 +22,6 @@ const Services = () => {
     gsap.utils.toArray('.service_section2 .left img').forEach((item) =>
       gsap.from(item, {
         scale: 0.4,
-
         scrollTrigger: {
           trigger: item,
           start: 'top 80%',

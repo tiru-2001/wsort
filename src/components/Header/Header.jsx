@@ -49,11 +49,15 @@ const Header = () => {
       </nav>
       {/* mobile nav  */}
       <section className="mobile_nav">
-        {!toggle && <CiMenuFries onClick={active} />}
+        {!toggle && (
+          <CiMenuFries style={{ cursor: 'pointer' }} onClick={active} />
+        )}
         {toggle && (
           <section className="toggle_menu">
             <section className="top">
-              {toggle && <RxCross2 onClick={active} />}
+              {toggle && (
+                <RxCross2 style={{ cursor: 'pointer' }} onClick={active} />
+              )}
             </section>
             <section className="bottom">
               {navLinks.map((item) => (
