@@ -20,7 +20,6 @@ const navLinks = [
   { path: '/services', title: 'Services', id: uuidv4() },
   { path: '/internships', title: 'Internships', id: uuidv4() },
 
-  { path: '/product', title: 'Product', id: uuidv4() },
   { path: '/about', title: 'About', id: uuidv4() },
 
   { path: '/contact', title: 'Contact', id: uuidv4() },
