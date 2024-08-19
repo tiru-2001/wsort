@@ -14,6 +14,8 @@ import {
   tanvi,
   sadhana,
   yakshith,
+  tiru,
+  jayanth,
 } from '../assets';
 const navLinks = [
   { path: '/', title: 'Home', id: uuidv4() },
@@ -105,9 +107,11 @@ const services_page = [
 ];
 
 const team = [
+  { img: jayanth, name: 'Jayanth', role: 'Founder' },
   { img: shifali, name: 'Shifali U', role: 'UI/UX' },
   { img: tanvi, name: 'Tanvi', role: 'Frontend Developer' },
   { img: sadhana, name: 'Sadhana', role: 'Frontend developer' },
   { img: yakshith, name: 'Yakshith', role: 'UI/UX' },
+  { img: tiru, name: 'Tirumalehsa E', role: 'Full stack developer' },
 ];
 export { navLinks, address, services, services_page, team };

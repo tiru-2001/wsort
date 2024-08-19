@@ -24,7 +24,8 @@ import sadhana from './images/sadhana.jpg';
 import tanvi from './images/tanvi.jpg';
 import shifali from './images/shifali.jpg';
 import yakshith from './images/yakshith.jpg';
-
+import tiru from './images/tiru.jpg';
+import jayanth from './images/jayanth.jpg';
 export {
   yakshith,
   sadhana,
@@ -52,4 +53,6 @@ export {
   sw,
   sa,
   mission,
+  tiru,
+  jayanth,
 };
