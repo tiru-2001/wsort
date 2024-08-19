@@ -1,6 +1,14 @@
 import './app.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Contact, Home, Services, Parent, About, Product } from './pages';
+import {
+  Contact,
+  Home,
+  Services,
+  Parent,
+  About,
+  Product,
+  Internships,
+} from './pages';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
@@ -15,6 +23,7 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/product" element={<Product />} />
+            <Route path="/internships" element={<Internships />} />
           </Route>
         </Routes>
       </Router>

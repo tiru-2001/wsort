@@ -4,3 +4,4 @@ export { default as About } from './about/About';
 export { default as Contact } from './contact/Contact';
 export { default as Parent } from './parent/Parent';
 export { default as Product } from './product/Product';
+export { default as Internships } from './internships/Internships';
