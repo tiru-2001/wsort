@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap-trial/ScrollTrigger';
 import { toast } from 'react-toastify';
 import { sendEmail } from '../../utilities/email';
+import { Helmet } from 'react-helmet';
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
@@ -110,54 +111,89 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact_container">
-      <h1>Contact Us</h1>
+    <>
+      <Helmet>
+        <title>Contact Us | Websort - Get in Touch with Us</title>
+        <meta
+          name="description"
+          content="Reach out to Websort for any inquiries or support. We are here to help you with all your IT needs. Contact us via phone, email, or our contact form."
+        />
 
-      <section className="form_section">
-        <form onSubmit={handleSubmit}>
-          <input
-            value={formData.firstname}
-            name="firstname"
-            type="text"
-            onChange={handleChange}
-            placeholder=" firstname"
-          />
-          <input
-            onChange={handleChange}
-            value={formData.lastname}
-            name="lastname"
-            type="text"
-            placeholder=" lastname"
-          />
-          <input
-            onChange={handleChange}
-            value={formData.email}
-            name="email"
-            type="email"
-            placeholder=" email"
-          />
-          <input
-            onChange={handleChange}
-            value={formData.phone}
-            name="phone"
-            type="tel"
-            placeholder=" number"
-          />
-          <input
-            onChange={handleChange}
-            value={formData.message}
-            name="message"
-            type="text"
-            placeholder="message"
-          />
-          <button>{loading ? 'loading...' : 'submit'}</button>
-        </form>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Contact Us | Websort - Get in Touch with Us"
+        />
+        <meta
+          property="og:description"
+          content="Reach out to Websort for any inquiries or support. We are here to help you with all your IT needs. Contact us via phone, email, or our contact form."
+        />
+        <meta
+          property="og:url"
+          content="https://www.thewebsort.com/contact-us"
+        />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://www.thewebsort.com/contact" />
+
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Websort" />
+        <meta
+          name="keywords"
+          content="contact Websort, IT support, customer service, IT solutions, get in touch, IT inquiries, contact form"
+        />
+      </Helmet>
+      <section className="contact_container">
+        <h1>Contact Us</h1>
+
+        <section className="form_section">
+          <form onSubmit={handleSubmit}>
+            <input
+              value={formData.firstname}
+              name="firstname"
+              type="text"
+              onChange={handleChange}
+              placeholder=" firstname"
+            />
+            <input
+              onChange={handleChange}
+              value={formData.lastname}
+              name="lastname"
+              type="text"
+              placeholder=" lastname"
+            />
+            <input
+              onChange={handleChange}
+              value={formData.email}
+              name="email"
+              type="email"
+              placeholder=" email"
+            />
+            <input
+              onChange={handleChange}
+              value={formData.phone}
+              name="phone"
+              type="tel"
+              placeholder=" number"
+            />
+            <input
+              onChange={handleChange}
+              value={formData.message}
+              name="message"
+              type="text"
+              placeholder="message"
+            />
+            <button>{loading ? 'loading...' : 'submit'}</button>
+          </form>
+        </section>
+        <h2 className="h2">Our Office locations</h2>
+        {address.map((item) => (
+          <AddressComponent key={item.id} {...item} />
+        ))}
       </section>
-      <h2 className="h2">Our Office locations</h2>
-      {address.map((item) => (
-        <AddressComponent key={item.id} {...item} />
-      ))}
-    </section>
+    </>
   );
 };
 
