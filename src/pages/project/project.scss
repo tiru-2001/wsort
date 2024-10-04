@@ -1,0 +1,235 @@
+@import '../../globalscss/global.scss';
+
+.project {
+  @include flex(column, null, null, 20px);
+  background: #d5f9fc;
+
+  .project_section1 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    @include responsive(300px) {
+      height: 60vh;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 10;
+      @include flex(column, center, start, 20px);
+      padding: 20px;
+      max-width: 50%;
+      opacity: 0;
+      margin-left: 80px;
+
+      @include responsive(767px) {
+        margin-left: 30px;
+      }
+      @include responsive(400px) {
+        margin-left: 20px;
+      }
+
+      h1 {
+        font-size: 4rem;
+        color: #222222;
+        @include responsive(767px) {
+          font-size: 3rem;
+        }
+        @include responsive(400px) {
+          font-size: 2.5rem;
+        }
+        @include responsive(300px) {
+          font-size: 2rem;
+          text-align: left;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #000000;
+        line-height: 1.5;
+        @include responsive(767px) {
+          font-size: 1rem;
+        }
+        @include responsive(400px) {
+          font-size: 0.9rem;
+        }
+        @include responsive(300px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .image {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-45%);
+      z-index: 9;
+      opacity: 0;
+      width: 25%;
+      margin-right: 10%;
+      filter: grayscale(100%);
+      
+      @include responsive(767px) {
+        width: 20%;
+      }
+      @include responsive(400px) {
+        width: 45%;
+        margin-top: 10%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .project_section2 {
+    @include flex(column, null, center, 40px); 
+    @include responsive(627px) {
+      margin-bottom: 200px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    @include responsive(377px) {
+      margin-bottom: 200px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    @include responsive(267px) {
+      margin-bottom: 600px;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    @include responsive(225px) {
+      margin-bottom: 800px;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px; 
+      @include responsive(627px) {
+        font-size: 2.3rem;
+      }
+    }
+
+    .bottom {
+      flex: 1;
+      @include responsive(627px) {
+        @include flex(column, null, null, 60px);
+      }
+
+      .even_item,
+      .odd_item {
+        @include flex(row, center, center, -10px); 
+        @include responsive(627px) {
+          @include flex(column, center, center, 0px);
+        }
+
+        .left {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: auto;
+            width: 50%;
+            object-fit: contain;
+            box-shadow: 3px -3px 5px rgb(123, 119, 119);
+            margin-bottom: 100px;
+            @include responsive(627px) {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+
+            }
+            @include responsive(317px) {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+
+            }
+          }
+        }
+
+        .right {
+          text-align: center;
+          flex: 1;
+          @include flex(column, center, center, 20px);
+          @include responsive(627px) {
+            @include flex(column, null, center, 10px);
+            padding: 10px;
+          }
+
+          h2 {
+            font-size: 2.1rem;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px; 
+            @include responsive(627px) {
+              font-size: 1.9rem;
+            }
+          }
+
+          p {
+            width: 70%;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            @include responsive(627px) {
+              width: 90%;
+            }
+          }
+          button {
+            background-color: #1e4476;
+            color: #fff8f8;
+            border: none;
+            padding: 10px 70px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin-bottom: 80px;
+
+            &:hover {
+              background-color: #6991cd;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      .odd_item .right {
+        order: 2;
+        @include responsive(627px) {
+          order: 3;
+        }
+      }
+
+      .even_item .left {
+        order: 2;
+        @include responsive(627px) {
+          order: 3;
+        }
+      }
+    }
+  }
+
+  .project_section3 {
+    height: 70vh;
+    @include responsive(627px) {
+        height: 100vh;
+
+    }
+  }
+}

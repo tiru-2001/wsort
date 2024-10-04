@@ -1,4 +1,5 @@
 @import '../../globalscss/global.scss';
+
 header {
   @include flex(row, space-between, center, 0px);
   height: 90px;
@@ -9,15 +10,19 @@ header {
   right: 0;
   z-index: 99;
   background-color: transparent;
+
   @include responsive(900px) {
     padding: 10px 20px;
   }
+
   .mobile_nav {
     display: none;
     position: relative;
+    
     @include responsive(900px) {
       display: flex;
     }
+
     .toggle_menu {
       border-radius: 10px;
       background: linear-gradient(to right, #ffefba, #ffffff);
@@ -27,13 +32,15 @@ header {
       right: -10px;
       height: 90vh;
       width: 60vw;
+
       @include flex(column, center, center, 0px);
+
       .top {
         align-self: end;
       }
+
       .bottom {
         @include flex(column, center, center, 30px);
-
         flex: 1;
       }
     }
@@ -46,14 +53,37 @@ header {
       object-fit: contain;
     }
   }
+
   nav {
     @include flex(row, center, center, 50px);
+
     .active {
       color: rgb(8, 33, 123);
       font-weight: 600;
     }
+
     @include responsive(900px) {
       display: none;
     }
+  }
+
+  .button-link {
+    background-color: #adaaaf;;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #504c4c; 
+    }
+  }
+
+  .mobile_nav .toggle_menu .bottom .button-link {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
   }
 }

@@ -5,7 +5,7 @@ import logo from './images/logo.png';
 import icon from './images/icon.png';
 import ui from './images/ui.jpg';
 import wd from './images/wd.jpg';
-import dm from './images/dm.jpg';
+import marketing from './images/marketing.jpg';
 import app from './images/app.jpg';
 import team from './images/team.jpg';
 import herobg1 from './images/herobg1.png';
@@ -26,6 +26,26 @@ import shifali from './images/shifali.jpg';
 import yakshith from './images/yakshith.jpg';
 import tiru from './images/tiru.jpg';
 import jayanth from './images/jayanth.jpg';
+import holi from './images/holi.png';
+import sono from './images/sono.png';
+import india from './images/india.png';
+import boom from './images/boom.png';
+import cmm from './images/cmm.png';
+import cngen from './images/cngen.png';
+import finn from './images/finn.png';
+import frank from './images/frank.png';
+import vishna from './images/vishna.png';
+import blue from './images/blue.png';
+import hammer from './images/hammer.png';
+import clock from './images/clock.png';
+import girllap from './images/girllap.png';
+import remote from './images/remote.png';
+import blog1 from './images/blog1.jpg';
+import blog2 from './images/blog2.jpg';
+import blog3 from './images/blog3.jpg';
+import blog4 from './images/blog4.jpg';
+import blog5 from './images/blog5.jpg';
+
 export {
   yakshith,
   sadhana,
@@ -45,7 +65,7 @@ export {
   herobg2,
   icon,
   wd,
-  dm,
+  marketing,
   app,
   ui,
   sm,
@@ -55,4 +75,19 @@ export {
   mission,
   tiru,
   jayanth,
+  holi,
+  india,
+  sono,
+  boom,
+  cmm,
+  cngen,
+  finn,
+  frank,
+  vishna,
+  blue,
+  hammer,
+  clock,
+  girllap,
+  remote,
+  blog1,blog2,blog3,blog4,blog5,
 };

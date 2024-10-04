@@ -242,7 +242,7 @@
     padding: 30px;
     @include flex(column, null, center, 100px);
     @include responsive(1269px) {
-      margin-bottom: 200px;
+      margin-bottom: 210px;
     }
     @include responsive(870px) {
       gap: 50px;
@@ -251,13 +251,17 @@
     @include responsive(770px) {
       margin-bottom: 500px;
     }
-    @include responsive(390px) {
-      margin-bottom: 700px;
+    @include responsive(450px) {
+      margin-bottom: 600px;
+    }
+    @include responsive(310px) {
+      margin-bottom: 1000px;
     }
     @include responsive(230px) {
       padding: 0px;
+      margin-bottom: 800px;
     }
-    @include responsive(259px) {
+    @include responsive(270px) {
       padding: 0px;
       margin-bottom: 1000px;
     }

@@ -1,16 +1,17 @@
 import './header.scss';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
-import { navLinks } from '../../utilities';
-import { NavLink } from 'react-router-dom';
-import { useGSAP } from '@gsap/react';
+import { navLinks } from '../../utilities'; // This includes the 'isButton' property for the Contact link
 import { CiMenuFries } from 'react-icons/ci';
 import { RxCross2 } from 'react-icons/rx';
 import gsap from 'gsap';
+
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  useGSAP(() => {
+
+  // GSAP Animation
+  useState(() => {
     let t1 = gsap.timeline();
     t1.from('.logo', {
       y: -30,
@@ -27,10 +28,13 @@ const Header = () => {
       stagger: 0.5,
       ease: 'bounce',
     });
-  });
+  }, []);
+
+  // Toggle mobile menu
   const active = () => {
     setToggle((prev) => !prev);
   };
+
   return (
     <header>
       <Link to="/" className="logo">
@@ -39,7 +43,9 @@ const Header = () => {
       <nav>
         {navLinks.map((item) => (
           <NavLink
-            className={({ isActive }) => `${isActive && 'active'} link`}
+            className={({ isActive }) =>
+              `${isActive && 'active'} link ${item.isButton ? 'button-link' : ''}`
+            }
             key={item.id}
             to={item.path}
           >
@@ -47,7 +53,6 @@ const Header = () => {
           </NavLink>
         ))}
       </nav>
-      {/* mobile nav  */}
       <section className="mobile_nav">
         {!toggle && (
           <CiMenuFries style={{ cursor: 'pointer' }} onClick={active} />
@@ -63,7 +68,9 @@ const Header = () => {
               {navLinks.map((item) => (
                 <NavLink
                   onClick={active}
-                  className={({ isActive }) => `${isActive && 'active'} link`}
+                  className={({ isActive }) =>
+                    `${isActive && 'active'} link ${item.isButton ? 'button-link' : ''}`
+                  }
                   key={item.id}
                   to={item.path}
                 >

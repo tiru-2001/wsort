@@ -1,6 +1,19 @@
 import './internships.scss';
 import { Helmet } from 'react-helmet';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 const Internships = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      containerRef.current,
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: 2, ease: 'power3.out' } 
+    );
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -36,30 +49,33 @@ const Internships = () => {
           content="IT internships, real-time project experience, startup India, Websort, IT career, certified internship, web development internship, software development internship"
         />
       </Helmet>
-      <section className="internship">
+      <section className="internship" ref={containerRef}>
         <section className="section1"></section>
         <section className="section2">
-          <h1>
-            Certified Internship Program in IT Sectors: Real-Time Project
-            Experience
-          </h1>
-          <p>
-            Websort, a Startup India certified company, offers internships
-            across various IT domains, designed to equip students with hands-on
-            experience in real-time projects. Our program provides comprehensive
-            guidance, helping interns develop practical skills and deep
-            understanding by working on live projects that mirror industry
-            standards. This certification adds credibility to our commitment to
-            nurturing future IT professionals, ensuring students are
-            well-prepared for their careers with valuable insights and
-            experience in their chosen fields.
-          </p>
-          <a
-            target="_blank"
-            href="https://docs.google.com/forms/d/11faL9W-811QqsA1VU88emNshYrrXec8K2B8U5Gt0ndY/edit?chromeless=1"
-          >
-            Register now
-          </a>
+          <div className="card">
+            <h1>
+              Certified Internship Program in IT Sectors: Real-Time Project
+              Experience
+            </h1>
+            <p>
+              Websort, a Startup India certified company, offers internships
+              across various IT domains, designed to equip students with hands-on
+              experience in real-time projects. Our program provides comprehensive
+              guidance, helping interns develop practical skills and deep
+              understanding by working on live projects that mirror industry
+              standards. This certification adds credibility to our commitment to
+              nurturing future IT professionals, ensuring students are
+              well-prepared for their careers with valuable insights and
+              experience in their chosen fields.
+            </p>
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/11faL9W-811QqsA1VU88emNshYrrXec8K2B8U5Gt0ndY/edit?chromeless=1"
+              rel="noreferrer"
+            >
+              Register now
+            </a>
+          </div>
         </section>
       </section>
     </>

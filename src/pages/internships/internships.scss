@@ -1,23 +1,30 @@
 @import '../../globalscss/global.scss';
+
 .internship {
+  background: linear-gradient(to right, #e7d7b5, #e5bd8c);
+
   .section1 {
-    height: 100vh;
-    background: url('https://economictimes.indiatimes.com/thumb/msid-69278826,width-1200,height-900,resizemode-4,imgsize-82628/internship2-getty.jpg?from=mdr');
-    background-size: cover;
+    margin-top: 8%;
+    margin-bottom: 6%;
+    height: 90vh;
+    background: url('../../assets//images/int.png');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size:80%;
+
     @include responsive(767px) {
       background-size: 100%;
-      height: 50vh;
+      height: 30vh;
+      margin-top: 25%;
     }
   }
+
   .section2 {
     margin-bottom: 500px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    justify-content: center; 
     padding: 20px 10px;
+
     @include responsive(1156px) {
       margin-bottom: 700px;
     }
@@ -26,7 +33,6 @@
     }
     @include responsive(500px) {
       margin-bottom: 900px;
-      gap: 30px;
     }
     @include responsive(373px) {
       margin-bottom: 1000px;
@@ -43,51 +49,82 @@
     @include responsive(206px) {
       margin-bottom: 1450px;
     }
-    h1 {
-      text-align: center;
-      font-size: 5rem;
-      @include responsive(767px) {
-        font-size: 4rem;
-      }
-      @include responsive(550px) {
-        font-size: 3rem;
-      }
-      @include responsive(450px) {
-        font-size: 2.3rem;
-      }
-    }
-    p {
-      font-size: 1.8rem;
-      line-height: 44px;
-      text-align: center;
+
+    .card {
+      background-color: rgb(255, 229, 205);
+      border-radius: 20px;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+      padding: 30px;
       width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 5%;
 
       @include responsive(767px) {
-        font-size: 1.4rem;
+        width: 90%;
+        padding: 20px;
       }
+
       @include responsive(550px) {
+        width: 95%;
+        gap: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        width: 80%;
+        font-size: 3rem;
+
+        @include responsive(767px) {
+          font-size: 2rem;
+        }
+        @include responsive(550px) {
+          font-size: 1.5rem;
+        }
+        @include responsive(450px) {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1.3rem;
+        line-height: 44px;
+        text-align: center;
+        width: 70%;
+
+        @include responsive(767px) {
+          font-size: 1.4rem;
+        }
+        @include responsive(550px) {
+          font-size: 1.2rem;
+          line-height: 34px;
+        }
+        @include responsive(450px) {
+          font-size: 1.1rem;
+          width: 96%;
+        }
+      }
+
+      a {
+        background-color: rgb(68, 80, 109);
+        text-align: center;
         font-size: 1.2rem;
-        line-height: 34px;
-      }
-      @include responsive(450px) {
-        font-size: 1.1rem;
-        width: 96%;
-      }
-    }
-    a {
-      background-color: rgb(30, 209, 72);
-      text-align: center;
-      font-size: 1.2rem;
-      padding: 20px 30px;
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      @include responsive(450px) {
-        padding: 15px;
+        padding: 20px 30px;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+
+        @include responsive(450px) {
+          padding: 15px;
+        }
       }
     }
   }
+
   .section3 {
     height: 100vh;
+    
   }
 }
