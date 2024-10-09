@@ -326,9 +326,33 @@
 
   .project_section3 {
     height: 70vh;
-    @include responsive(627px) {
+    @include responsive(1270px) {
+      height: 70vh;
+
+  }@include responsive(927px) {
+    height: 80vh;
+
+}
+    @include responsive(827px) {
         height: 100vh;
 
     }
+    @include responsive(727px) {
+      height: 80vh;
+
+  }@include responsive(627px) {
+    height: 50vh;
+
+}@include responsive(527px) {
+  height: 70vh;
+
+}
+@include responsive(427px) {
+  height: 80vh;
+
+}@include responsive(327px) {
+  height: 90vh;
+
+}
   }
 }

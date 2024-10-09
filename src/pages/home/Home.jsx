@@ -39,35 +39,50 @@ const Home = () => {
 		// 		scrub: 1,
 		// 	},
 		// });
-    gsap.fromTo(".home_section1 .bottom h1", {
-      opacity: 0,
-      duration: 2, 
-      ease: "power2.out"
-    }, {
-      opacity: 1, 
-      duration: 2,
-      delay:1, 
-      scrollTrigger: {
-        trigger: ".home_section1 .bottom h1",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-        onLeave: () => {
-          gsap.to(".home_section1 .bottom h1", { opacity: 0, duration: 1 });
-        }
-      }
-    });
+    // gsap.fromTo(".home_section1 .bottom h1", {
+    //   opacity: 0,
+    //   duration: 2, 
+    //   ease: "power2.out"
+    // }, {
+    //   opacity: 1, 
+    //   duration: 2,
+    //   delay:1, 
+    //   scrollTrigger: {
+    //     trigger: ".home_section1 .bottom h1",
+    //     start: "top 80%",
+    //     end: "top 30%",
+    //     scrub: true,
+    //     onLeave: () => {
+    //       gsap.to(".home_section1 .bottom h1", { opacity: 0, duration: 1 });
+    //     }
+    //   }
+    // });
     
-    ScrollTrigger.create({
-      trigger: ".home_section1 .bottom p",
-      start: "top 70%",  
-      onEnter: () => {
-        new TypeIt(".home_section1 .bottom p", {
-          speed: 40,     
-          waitUntilVisible: true,  
-        }).go();
-      }
-    });
+    // ScrollTrigger.create({
+    //   trigger: ".home_section1 .bottom p",
+    //   start: "top 70%",  
+    //   onEnter: () => {
+    //     new TypeIt(".home_section1 .bottom p", {
+    //       speed: 40,     
+    //       waitUntilVisible: true,  
+    //     }).go();
+    //   }
+    // });
+    gsap.from(".home_section1 .bottom p",{
+      x:-900,
+      opacity:0,
+      duration:2,
+      delay:0.3,
+      ease:"power2.inout",
+      // scrollTrigger: {
+      //   trigger: '.home_section1 .bottom p',
+      //   start: 'top 99%',
+      //   end: 'top 1%',
+      //   scrub: 2,
+      //   toggleActions: 'play reverse play reverse', 
+      //   yoyo: true,
+      // },
+    })
 		gsap.from(".team_image", {
 			x: -900,
 			duration: 1,

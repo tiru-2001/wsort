@@ -3,30 +3,33 @@
   padding: 100px 50px 400px;
   @include flex(column, null, center, 50px);
   min-height: 100vh;
+  overflow: hidden;
   background: url('../../assets//images/grid.jpg') center/cover no-repeat;
-  @include responsive(832px) {
+  @include responsive(700px) {
     // margin-bottom: 250px;
+    padding-bottom: 500px;
+  }
+  @include responsive(900px) {
+    padding-bottom: 500px;
+  }
+  @include responsive(600px) {
+    padding-bottom: 600px;
+  }
+  @include responsive(450px) {
+    padding-bottom: 700px;
+  }
+  @include responsive(370px) {
     padding-bottom: 800px;
   }
-
-  @include responsive(477px) {
-    padding-bottom: 1000px;
-  }
-
-  @include responsive(362px) {
-    padding-bottom: 1050px;
-  }
   @include responsive(291px) {
-    padding-bottom: 1150px;
+    padding-bottom: 900px;
   }
-  @include responsive(251px) {
-    padding-bottom: 1250px;
-  }
+ 
   @include responsive(234px) {
-    padding-bottom: 1350px;
+    padding-bottom: 950px;
   }
   @include responsive(210px) {
-    padding-bottom: 1450px;
+    padding-bottom: 750px;
   }
   h1,
   h2 {

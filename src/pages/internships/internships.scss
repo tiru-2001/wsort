@@ -26,28 +26,31 @@
     padding: 20px 10px;
 
     @include responsive(1156px) {
-      margin-bottom: 700px;
+      margin-bottom: 100px;
     }
-    @include responsive(767px) {
-      margin-bottom: 800px;
+    @include responsive(867px) {
+      margin-bottom: 500px;
     }
     @include responsive(500px) {
-      margin-bottom: 900px;
+      margin-bottom: 600px;
+    }
+    @include responsive(400px) {
+      margin-bottom: 600px;
     }
     @include responsive(373px) {
-      margin-bottom: 1000px;
+      margin-bottom: 700px;
     }
     @include responsive(310px) {
-      margin-bottom: 1100px;
+      margin-bottom: 700px;
     }
     @include responsive(277px) {
-      margin-bottom: 1300px;
+      margin-bottom: 800px;
     }
     @include responsive(220px) {
-      margin-bottom: 1400px;
+      margin-bottom: 800px;
     }
     @include responsive(206px) {
-      margin-bottom: 1450px;
+      margin-bottom: 750px;
     }
 
     .card {
