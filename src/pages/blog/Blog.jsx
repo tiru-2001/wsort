@@ -5,15 +5,18 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap-trial/ScrollTrigger";
 import { blogsection } from "../../utilities";
 import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import LazyLoad from "react-lazyload"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Blog = () => {
-	  const navigate = useNavigate();
-const handleReadBlogClick = () => {
-	navigate("/indiBlog");
-};
+	const navigate = useNavigate();
+
+	const handleReadBlogClick = () => {
+		navigate("/indiBlog");
+	};
+
 	useGSAP(() => {
 		gsap.from(".blog-top h1,.blog-top p", {
 			x: 100,
@@ -28,30 +31,28 @@ const handleReadBlogClick = () => {
 		const imageContainers = gsap.utils.toArray(".blog-item .image-container");
 		const descriptions = gsap.utils.toArray(".blog-item .description");
 
-		
 		imageContainers.forEach((item) => {
 			gsap.from(item, {
 				x: -150,
 				opacity: 0,
 				duration: 0.5,
 				scrollTrigger: {
-					trigger: item, 
-					start: "top 90%", 
+					trigger: item,
+					start: "top 90%",
 					end: "top 60%",
 					scrub: 2,
 				},
 			});
 		});
 
-	
 		descriptions.forEach((item) => {
-			const elementsToAnimate = gsap.utils.toArray("p, button", item); // Select both p and button inside each description
+			const elementsToAnimate = gsap.utils.toArray("p, button", item);
 
 			gsap.from(elementsToAnimate, {
 				x: 150,
 				opacity: 0,
 				duration: 0.5,
-				stagger: 0.2, 
+				stagger: 0.2,
 				scrollTrigger: {
 					trigger: item,
 					start: "top 80%",
@@ -60,7 +61,8 @@ const handleReadBlogClick = () => {
 				},
 			});
 		});
-	})
+	});
+
 	return (
 		<>
 			<Helmet>
@@ -69,8 +71,6 @@ const handleReadBlogClick = () => {
 					name="description"
 					content="Explore the Websort blog for the latest insights, updates, and expert advice on IT solutions, technology trends, and industry best practices."
 				/>
-
-				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:title"
@@ -83,13 +83,9 @@ const handleReadBlogClick = () => {
 				<meta property="og:url" content="https://www.thewebsort.com/blog" />
 				<meta
 					property="og:image"
-					content="https://www.thewebsort.com/assets/blog-thumbnail.jpg" // Update with an actual image URL
+					content="https://www.thewebsort.com/assets/blog-thumbnail.jpg"
 				/>
-
-				{/* Canonical Link */}
 				<link rel="canonical" href="https://www.thewebsort.com/blog" />
-
-				{/* Additional Meta Tags */}
 				<meta name="robots" content="index, follow" />
 				<meta name="author" content="Websort Blog Team" />
 				<meta
@@ -108,19 +104,26 @@ const handleReadBlogClick = () => {
 
 				<section className="blog-section">
 					{blogsection.map((item) => (
-						<section className="blog-item" key={item.id}>
-							<section className="image-container">
-								<img src={item.img} alt={item.desc} />
+						<LazyLoad key={item.id} height={300} offset={100}>
+							<section className="blog-item">
+								<section className="image-container">
+									{/* Native lazy loading for images */}
+									<img src={item.img} alt={item.alt} loading="lazy" />
+								</section>
+								<section className="description">
+									<p>{item.desc}</p>
+									<button
+										onClick={handleReadBlogClick}
+										className="read-btn"
+									>
+										Read Blog
+									</button>
+								</section>
 							</section>
-							<section className="description">
-								<p>{item.desc}</p>
-								<button onClick={handleReadBlogClick} className="read-btn">
-									Read Blog
-								</button>
-							</section>
-						</section>
+						</LazyLoad>
 					))}
 				</section>
+
 				<section className="blog-bottom"></section>
 			</section>
 		</>

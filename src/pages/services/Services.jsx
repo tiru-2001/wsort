@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useGSAP(() => {
-     gsap.to('.service_section1 .bottom', {
+    gsap.to('.service_section1 .bottom', {
       left: '50%',
       transform: 'translate(-50%,-50%)',
       duration: 1,
@@ -57,26 +57,26 @@ const Services = () => {
       gsap.to(target, {
          x: -50,
          duration: 0.3 
-        });
+      });
     };
     const handleMouseLeaveHorizontal = (target) => {
       gsap.to(target, {
          x: 0,
-          duration: 0.3 
-        });
+         duration: 0.3 
+      });
     };
 
     const handleMouseEnterVertical = (target) => {
       gsap.to(target, {
          y: -40, 
          duration: 0.3
-         });
+      });
     };
     const handleMouseLeaveVertical = (target) => {
       gsap.to(target, { 
-        y: 0,
+         y: 0,
          duration: 0.3
-         });
+      });
     };
 
     if (gridItem1Image) {
@@ -157,7 +157,7 @@ const Services = () => {
                 return (
                   <section className="even_item" key={ind}>
                     <section className="left">
-                      <img src={singleservice.img} alt="" />
+                      <img src={singleservice.img} alt={singleservice.alt} loading="lazy" />
                     </section>
                     <section className="right">
                       <h2>{singleservice.title}</h2>
@@ -169,7 +169,7 @@ const Services = () => {
                 return (
                   <section className="odd_item" key={ind}>
                     <section className="left">
-                      <img src={singleservice.img} alt="" />
+                      <img src={singleservice.img} alt="" loading="lazy" />
                     </section>
                     <section className="right">
                       <h2>{singleservice.title}</h2>
@@ -188,7 +188,7 @@ const Services = () => {
                 <h2>High-quality results, prompt service, and affordable pricing.</h2>
                 <p>At WebSort, we prioritize delivering high-quality results on time and within budget. Our commitment to punctuality, affordability, and excellence sets us apart in the industry, ensuring client satisfaction on every project. We combine expertise and reliability to consistently provide top-notch service, making us a trusted partner in every endeavor.
                 </p>
-                <img src={clock} alt="Top Notch" className="griditem1 image" />
+                <img src={clock} alt="Top Notch" className="griditem1 image" loading="lazy" />
               </div>
 
               <div className="grid-right">
@@ -197,7 +197,7 @@ const Services = () => {
                   <p>
                   With extensive industry experience and deep domain knowledge, we provide our clients with exceptional insights and expertise. Our hands-on approach ensures tailored solutions that address specific challenges, delivering unmatched value and results. 
                   </p>
-                  <img src={remote} alt="Domain Experts" className="griditem2 image" />
+                  <img src={remote} alt="Domain Experts" className="griditem2 image" loading="lazy" />
                 </div>
 
                 <div className="grid-horizontal">
@@ -206,7 +206,7 @@ const Services = () => {
                     <p>
                       World-class team mastering challenges across diverse domains, delivering excellence through expertise and innovation.
                     </p>
-                    <img src={girllap} alt="Diverse Domains" className="griditem3 image1" />
+                    <img src={girllap} alt="Diverse Domains" className="griditem3 image1" loading="lazy" />
                   </div>
 
                   <div className="grid-item grid-item4">
@@ -214,7 +214,7 @@ const Services = () => {
                     <p>
                       Our design-centered approach ensures a wow factor, delivering superior user experiences that are future-focused.
                     </p>
-                    <img src={hammer} alt="Future Ready" className="griditem4 image" />
+                    <img src={hammer} alt="Future-Ready" className="griditem4 image" loading="lazy" />
                   </div>
                 </div>
               </div>

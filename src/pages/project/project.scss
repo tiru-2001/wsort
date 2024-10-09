@@ -2,16 +2,23 @@
 
 .project {
   @include flex(column, null, null, 20px);
-  background: #d5f9fc;
+  background: linear-gradient(to right, #bdc3c7, #687079);
+  overflow: hidden;
 
   .project_section1 {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    @include responsive(300px) {
-      height: 60vh;
+    // display: flex;
+    // justify-content: space-between;
+    
+    @include responsive(800px) {
+      height: 100vh;
     }
-
+    @include responsive(500px) {
+     margin-top: 10%;
+    }
+  
     .text {
       position: absolute;
       top: 50%;
@@ -23,45 +30,89 @@
       max-width: 50%;
       opacity: 0;
       margin-left: 80px;
-
+      @include responsive(1200px) {
+        margin-left: 10px;
+        max-width: 90%; 
+        position: relative; 
+        top: 13%; 
+        transform: none; 
+      } 
       @include responsive(767px) {
         margin-left: 30px;
       }
+      @include responsive(500px) {
+        margin-left: 10px;
+        max-width: 90%; 
+        position: relative; 
+        top: 13%; 
+        transform: none; 
+      } 
       @include responsive(400px) {
-        margin-left: 20px;
+        margin-left: 10px;
+        max-width: 90%; 
+        position: relative; 
+        top: 10%;
+        transform: none; 
+      } @include responsive(380px) {
+        margin-left: 10px;
+        max-width: 90%; 
+        position: relative; 
+        top: 15%;
+        transform: none; 
       }
-
+  
       h1 {
         font-size: 4rem;
         color: #222222;
         @include responsive(767px) {
           font-size: 3rem;
         }
+        @include responsive(500px) {
+          font-size: 2.7rem;
+        }
         @include responsive(400px) {
-          font-size: 2.5rem;
+          font-size: 2.7rem;
         }
         @include responsive(300px) {
-          font-size: 2rem;
-          text-align: left;
+          font-size: 2.3rem;
         }
       }
-
+  
       p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #000000;
         line-height: 1.5;
+        margin-top: 5%;
+
+        @include responsive(1200px) {
+          font-size: 2rem;
+          margin-left: 10px;
+          margin-bottom: 20px;
+
+        }
         @include responsive(767px) {
-          font-size: 1rem;
+          font-size: 1.4rem;
+          margin-left: 10px;
+          margin-bottom: 20px;
+        }
+        @include responsive(500px) {
+          font-size: 1.3rem;
+          margin-left: 10px;
+          margin-bottom: 20px;
+
         }
         @include responsive(400px) {
-          font-size: 0.9rem;
+          font-size: 1.1rem;
+          margin-left: 10px;
+          margin-bottom: 20px;
+
         }
         @include responsive(300px) {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
         }
       }
     }
-
+  
     .image {
       position: absolute;
       top: 50%;
@@ -71,21 +122,69 @@
       opacity: 0;
       width: 25%;
       margin-right: 10%;
+      margin-bottom: 10%;
       filter: grayscale(100%);
+      @include responsive(1200px) {
+        position: relative;
+        top: -10%; 
+        right: 0; 
+        transform: none; 
+        width: 45%;
+        margin-top: 60%;
+        margin-right: 0; 
+        margin-left: auto;
+        margin-right: auto; 
+      }
+      @include responsive(800px) {
+        position: relative;
+        top: -22%; 
+       
+      }
+      @include responsive(500px) {
+        position: relative;
+        top: -10%; 
       
-      @include responsive(767px) {
-        width: 20%;
+      } @include responsive(600px) {
+        position: relative;
+        top: -30%; 
+     
+      }
+       @include responsive(500px) {
+        position: relative;
+        top: -10%; 
       }
       @include responsive(400px) {
-        width: 45%;
-        margin-top: 10%;
+        position: relative;
+        top: -15%; 
+      
       }
+  
       img {
         width: 100%;
         height: 100%;
       }
     }
+  
+    @include responsive(1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      .text {
+        margin-bottom: 20px;
+      }
+      
+      .image {
+        margin-bottom: 20%;
+      }
+      
+      p {
+        width: 90%; 
+      }
+    }
   }
+  
 
   .project_section2 {
     @include flex(column, null, center, 40px); 

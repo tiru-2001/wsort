@@ -192,6 +192,8 @@ const Contact = () => {
         {address.map((item) => (
           <AddressComponent key={item.id} {...item} />
         ))}
+              <section className='last_section'></section>
+
       </section>
     </>
   );

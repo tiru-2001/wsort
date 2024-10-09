@@ -19,7 +19,7 @@ import sa from './images/sa.jpg';
 import sm from './images/sm.jpg';
 import su from './images/su.jpg';
 import sw from './images/sw.jpg';
-import mission from './images/mission.jpg';
+import mission from './images/mission.png';
 import sadhana from './images/sadhana.jpg';
 import tanvi from './images/tanvi.jpg';
 import shifali from './images/shifali.jpg';
@@ -45,7 +45,8 @@ import blog2 from './images/blog2.jpg';
 import blog3 from './images/blog3.jpg';
 import blog4 from './images/blog4.jpg';
 import blog5 from './images/blog5.jpg';
-
+import Kishore from './images/Kishore.png';
+import Prithvin from './images/Prithvin.png';
 export {
   yakshith,
   sadhana,
@@ -89,5 +90,11 @@ export {
   clock,
   girllap,
   remote,
-  blog1,blog2,blog3,blog4,blog5,
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  Kishore,
+  Prithvin,
 };

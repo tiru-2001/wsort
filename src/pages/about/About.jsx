@@ -5,9 +5,14 @@ import ScrollTrigger from "gsap-trial/ScrollTrigger";
 import { mission } from "../../assets";
 import { team } from "../../utilities";
 import { Helmet } from "react-helmet";
-import BlogSection from "../../components/blogSection/BlogSection";
+import { useNavigate } from "react-router-dom";
+import LazyLoad from "react-lazyload";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+	const navigate = useNavigate();
+
 	useGSAP(() => {
 		gsap.to(".about_section1 .content", {
 			top: 0,
@@ -21,6 +26,11 @@ const About = () => {
 			},
 		});
 	});
+
+	const goToBlog = () => {
+		navigate("/blog");
+	};
+
 	return (
 		<>
 			<Helmet>
@@ -29,8 +39,6 @@ const About = () => {
 					name="description"
 					content="Learn more about Websort, our mission, vision, and the team behind our success. We are dedicated to providing top-notch IT solutions and services."
 				/>
-
-				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:title"
@@ -41,11 +49,7 @@ const About = () => {
 					content="Learn more about Websort, our mission, vision, and the team behind our success. We are dedicated to providing top-notch IT solutions and services."
 				/>
 				<meta property="og:url" content="https://www.thewebsort.com/about" />
-
-				{/* Canonical Link */}
 				<link rel="canonical" href="https://www.thewebsort.com/about" />
-
-				{/* Additional Meta Tags */}
 				<meta name="robots" content="index, follow" />
 				<meta name="author" content="Websort" />
 				<meta
@@ -67,7 +71,7 @@ const About = () => {
 					</h2>
 					<section className="section2_content">
 						<section className="left">
-							<img src={mission} alt="mission" />
+							<img src={mission} alt="Website Development" loading="lazy" />
 						</section>
 						<section className="right">
 							<p>
@@ -81,7 +85,7 @@ const About = () => {
 								digital products. With a commitment to innovation and
 								excellence, we build strong partnerships with our clients to
 								help them achieve their goals and shine in the digital
-								landscape. At websort, your success is our mission
+								landscape. At websort, your success is our mission.
 							</p>
 						</section>
 					</section>
@@ -90,9 +94,11 @@ const About = () => {
 					<h2>Team</h2>
 					<section className="section3_content">
 						{team.map((item) => (
-							<section className="members">
+							<section className="members" key={item.name}>
 								<section className="top">
-									<img src={item.img} alt={item.name} />
+									<LazyLoad height={200} offset={100}>
+										<img src={item.img} alt={item.name} />
+									</LazyLoad>
 								</section>
 								<section className="bottom">
 									<h3>{item.name}</h3>
@@ -103,7 +109,8 @@ const About = () => {
 					</section>
 				</section>
 				<section className="about_section4">
-					<BlogSection />
+					<h1>Explore our blogs here</h1>
+					<button onClick={goToBlog}>GoTo Blog</button>
 				</section>
 				<section className="about_section5"></section>
 			</section>
