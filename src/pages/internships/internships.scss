@@ -124,7 +124,24 @@
   }
 
   .section3 {
-    height: 100vh;
-    
+    height: 5vh;
+    @include responsive(700px){
+      height: 10vh;
+    }
+    @include responsive(600px){
+      height: 10vh;
+    }
+    @include responsive(500px){
+      height: 10vh;
+    }
+    @include responsive(400px){
+      height: 20vh;
+    }
+    @include responsive(375px){
+      height: 10vh;
+    }
+    @include responsive(310px){
+      height: 10vh;
+    }
   }
 }

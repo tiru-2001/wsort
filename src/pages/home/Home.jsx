@@ -11,56 +11,74 @@ import {
   BsTransparency,
   FaPeopleCarry,
   FaSackDollar,
-  herobg1,
-  herobg2,
+  // herobg1,
+  // herobg2,
 } from '../../assets/index';
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   useGSAP(() => {
     let t1 = gsap.timeline();
-    gsap.to('.top_left', {
-      x: -800,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.top_left',
-        start: 'top 1%',
-        end: 'top -20%',
-        scrub: 1,
-      },
-    });
+    // gsap.to('.top_left', {
+    //   x: -800,
+    //   ease: 'power3.out',
+    //   scrollTrigger: {
+    //     trigger: '.top_left',
+    //     start: 'top 1%',
+    //     end: 'top -20%',
+    //     scrub: 1,
+    //   },
+    // });
 
-    gsap.to('.top_right', {
-      x: 800,
-      ease: 'power3.out',
+    // gsap.to(".top_right", {
+		// 	x: 800,
+		// 	ease: "power3.out",
+		// 	scrollTrigger: {
+		// 		trigger: ".top_right",
+		// 		start: "top 1%",
+		// 		end: "top -20%",
+		// 		scrub: 1,
+		// 	},
+		// });
+    gsap.fromTo(".home_section1 .bottom h1", {
+      opacity: 0,
+      duration: 2, 
+      ease: "power2.out"
+    }, {
+      opacity: 1, 
+      duration: 2,
+      delay:1, 
       scrollTrigger: {
-        trigger: '.top_right',
-        start: 'top 1%',
-        end: 'top -20%',
-        scrub: 1,
-      },
+        trigger: ".home_section1 .bottom h1",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+        onLeave: () => {
+          gsap.to(".home_section1 .bottom h1", { opacity: 0, duration: 1 });
+        }
+      }
     });
-    gsap.to('.section2_subsection', {
-      transform: ' translateX(0)',
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: '.section2_subsection',
-        start: 'top 20%',
-        end: 'top -160%',
-        pin: true,
-        scrub: 1,
-      },
+    
+    ScrollTrigger.create({
+      trigger: ".home_section1 .bottom p",
+      start: "top 70%",  
+      onEnter: () => {
+        new TypeIt(".home_section1 .bottom p", {
+          speed: 40,     
+          waitUntilVisible: true,  
+        }).go();
+      }
     });
-    gsap.from('.team_image', {
-      x: -900,
-      duration: 1,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: '.team_image',
-        start: 'top 95%',
-        end: 'top 50%',
-        scrub: 2,
-      },
-    });
+		gsap.from(".team_image", {
+			x: -900,
+			duration: 1,
+			ease: "power1.inOut",
+			scrollTrigger: {
+				trigger: ".team_image",
+				start: "top 95%",
+				end: "top 50%",
+				scrub: 2,
+			},
+		});
     gsap.from('.home_section3_right', {
       x: 500,
       ease: 'power1.inOut',
@@ -119,7 +137,7 @@ const Home = () => {
       id: v4(),
       icon: <FaPeopleCarry className="icon" />,
       title: 'Understanding your needs',
-      desc: 'We understand your goal ,preferences,timelines,deliverables and come out with optimized solution',
+      desc: 'We understand your goal,preferences,timelines,deliverables and come out with optimized solution',
     },
   ];
   return (
@@ -158,12 +176,12 @@ const Home = () => {
       <section className="home">
         <section className="home_section1">
           <section className="top">
-            <section className="top_left">
+            {/* <section className="top_left">
               <img src={herobg1} alt="herobg1" />
             </section>
             <section className="top_right">
               <img src={herobg2} alt="herobg2" />
-            </section>
+            </section> */}
           </section>
           <section className="bottom">
             <h1>Websort-Your Premier Web Development and Design Partner</h1>
@@ -177,13 +195,14 @@ const Home = () => {
           </section>
         </section>
         <section className="home_section2">
+          <h1>We Provide the Best-Services for you</h1>
           <section className="section2_subsection">
             {services.map((item) => {
               return (
                 <section key={item.id} className="service_items">
                   <section className="top">
                     <section className="top_top">
-                      <img src={item.img} alt="" />
+                      <img src={item.img} alt={item.alt} />
                     </section>
                     <section className="top_bottom">
                       <h1 className="heading_font">{item.title}</h1>

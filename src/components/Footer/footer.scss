@@ -24,10 +24,12 @@ footer {
     .footertop_childs {
       @include flex(column, start, null, 20px);
 
-      h3 {
+      .quicklink {
         font-size: 1.2rem;
         line-height: 30px;
-        
+        @include responsive(767px){
+          display: none;
+        }
       }
       p {
         font-size: 0.9rem;
@@ -36,6 +38,9 @@ footer {
       }
       .quick_links {
         @include flex(column, null, null, 10px);
+        @include responsive(767px){
+          display: none
+        }
       }
       .social_media {
         @include flex(row, null, null, 10px);
@@ -43,6 +48,12 @@ footer {
       .footerlink {
         text-decoration: underline;
       }
+    }
+  }
+  .footer_bottom{
+    @include responsive(500px) {
+      margin-bottom: 15%;
+      
     }
   }
 }

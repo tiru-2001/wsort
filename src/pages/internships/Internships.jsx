@@ -22,7 +22,6 @@ const Internships = () => {
           name="description"
           content="Join Websort's certified IT internship program and gain real-time project experience in various IT domains. Register now to kickstart your IT career!"
         />
-
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta
@@ -37,10 +36,8 @@ const Internships = () => {
           property="og:url"
           content="https://www.thewebsort.com/internships"
         />
-
         {/* Canonical Link */}
         <link rel="canonical" href="https://www.thewebsort.com/internships" />
-
         {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Websort" />
@@ -49,8 +46,11 @@ const Internships = () => {
           content="IT internships, real-time project experience, startup India, Websort, IT career, certified internship, web development internship, software development internship"
         />
       </Helmet>
+      
       <section className="internship" ref={containerRef}>
-        <section className="section1"></section>
+        <section className="section1">
+        </section>
+        
         <section className="section2">
           <div className="card">
             <h1>
@@ -76,6 +76,9 @@ const Internships = () => {
               Register now
             </a>
           </div>
+        </section>
+        <section className='section3'>
+
         </section>
       </section>
     </>

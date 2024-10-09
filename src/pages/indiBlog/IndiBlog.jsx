@@ -41,7 +41,8 @@ const IndiBlog = () => {
         </section>
 
         <section className="indiblog2">
-          <img src={blog1} alt="blog-image" />
+          {/* Lazy loading blog image */}
+          <img src={blog1} alt="blog-image" loading="lazy" />
         </section>
 
         <section className="indiblog3">
@@ -87,7 +88,8 @@ const IndiBlog = () => {
           </section>
 
           <section className="indiblog-img">
-            <img src={shifali} alt="Founder" />
+            {/* Lazy loading author image */}
+            <img src={shifali} alt="Founder" loading="lazy" />
             <h3>Shifali U</h3>
             <p>UI/UX </p>
           </section>
@@ -100,80 +102,3 @@ const IndiBlog = () => {
 };
 
 export default IndiBlog;
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import { blogsection } from "../../utilities";
-// import {  shifali } from "../../assets";
-// import { Helmet } from "react-helmet";
-// import "./IndiBlog.scss";
-
-// const IndiBlog = () => {
-// 	  const { id } = useParams();
-// 		const blog = blogsection.find((item) => item.id === id);
-
-// 		console.log("Requested Blog ID:", id);
-// 		console.log("Blog Data:", blog);
-
-// 		if (!blog) {
-// 			return <p>Blog not found</p>;
-// 		}
-
-// 	return (
-// 		<>
-// 			<Helmet>
-// 				<title>{blog.desc} | Websort Blog</title>
-// 				<meta name="description" content={blog.content1.substring(0, 150)} />
-// 				{/* Open Graph / Facebook Meta Tags */}
-// 				<meta property="og:type" content="article" />
-// 				<meta property="og:title" content={${blog.desc} | Websort Blog} />
-// 				<meta
-// 					property="og:description"
-// 					content={blog.content1.substring(0, 150)}
-// 				/>
-// 				<meta property="og:image" content={blog.img} />{" "}
-// 				{/* Add the actual image URL here */}
-// 				<meta
-// 					property="og:url"
-// 					content={https://www.thewebsort.com/blog/${id}}
-// 				/>
-// 				{/* Canonical URL */}
-// 				<link rel="canonical" href={https://www.thewebsort.com/blog/${id}} />
-// 				{/* Additional Meta Tags */}
-// 				<meta name="robots" content="index, follow" />
-// 				<meta name="author" content="Shifali U" />
-// 				<meta
-// 					name="keywords"
-// 					content="SEO tips, social media marketing, content creation, email marketing, online presence, blog tips"
-// 				/>
-// 			</Helmet>
-
-// 			<section className="indiblog-main">
-// 				<section className="indiblog1">
-// 					<h1>{blog.desc}</h1>
-// 				</section>
-
-// 				<section className="indiblog2">
-// 					<img src={blog.img} alt={${blog.desc} - Blog Cover Image} />
-// 				</section>
-
-// 				<section className="indiblog3">
-// 					<section className="indiblog3-text">
-// 						<p>{blog.content1}</p>
-// 						<p>{blog.content2}</p>
-// 						<p>{blog.content3}</p>
-// 						<p>{blog.content4}</p>
-// 					</section>
-// 					<section className="indiblog-img">
-// 						<img src={shifali} alt="UI/UX" />
-// 						<h3>Shifali U</h3>
-// 						<p>UI/UX </p>
-// 					</section>
-// 				</section>
-
-// 				<section className="indiblogLast"></section>
-// 			</section>
-// 		</>
-// 	);
-// };
-
-// export default IndiBlog;

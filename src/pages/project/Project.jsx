@@ -139,7 +139,7 @@ const Projects = () => {
             </p>
           </section>
           <section className="image">
-            <img src={img} alt="Success Story" />
+            <img src={img} alt="Best Website Builders" loading="lazy" />
           </section>
         </section>
 
@@ -153,7 +153,7 @@ const Projects = () => {
                 return (
                   <section className="even_item" key={ind}>
                     <section className="left">
-                      <img src={singleProject.img} alt="" />
+                      <img src={singleProject.img} alt={singleProject.alt} loading="lazy" />
                     </section>
                     <section className="right">
                       <h2>{singleProject.title}</h2>
@@ -168,7 +168,7 @@ const Projects = () => {
                 return (
                   <section className="odd_item" key={ind}>
                     <section className="left">
-                      <img src={singleProject.img} alt="" />
+                      <img src={singleProject.img} alt="" loading="lazy" />
                     </section>
                     <section className="right">
                       <h2>{singleProject.title}</h2>

@@ -16,6 +16,8 @@ import {
   yakshith,
   tiru,
   jayanth,
+  Kishore,
+  Prithvin,
   holi,
   india,
   sono,
@@ -72,18 +74,21 @@ const services = [
   {
     id: uuidv4(),
     img: wd,
+    alt:"Website Development Company",
     title: 'Web development',
     linke: '/services',
   },
   {
     id: uuidv4(),
     img: ui,
+    alt:"Website Development Company",
     title: 'UI/UX',
     linke: '/services',
   },
   {
     id: uuidv4(),
     img: app,
+    alt:"Website Development Company",
     title: 'App development',
     linke: '/services',
   },
@@ -91,6 +96,7 @@ const services = [
   {
     id: uuidv4(),
     img: marketing,
+    alt:"Website Development Company",
     title: 'Digital Marketing',
     linke: '/services',
   },
@@ -100,41 +106,48 @@ const services_page = [
   {
     id: uuidv4(),
     img: sw,
+    alt:"Best Website Builders",
     title: 'Web development',
     desc: 'Building robust, scalable websites with seamless functionality and a focus on enhancing user experience and engagement. Our solutions are designed to adapt to evolving business requirements and technological advancements. We specialize in responsive design, ensuring your site looks and performs great on all devices, and implement the latest security measures to protect your data.',
   },
   {
     id: uuidv4(),
     img: sa,
+    alt:"Best Website Builders",
     title: 'App development',
     desc: 'Crafting high-performance, user-friendly mobile and web applications tailored to your business needs with cutting-edge technologies. From ideation to deployment, we ensure seamless functionality and a superior user experience. Our team excels in developing scalable solutions, maintaining code quality, and providing ongoing support and updates.',
   },
   {
     id: uuidv4(),
     img: su,
+    alt:"Best Website Builders",
     title: 'UI/UX',
     desc: 'Designing intuitive and visually appealing interfaces that provide an engaging and effortless user experience across all devices. We prioritize user feedback and iterative testing to deliver designs that truly resonate with your audience. Our approach integrates user-centered design principles, ensuring that every interaction is both meaningful and delightful.',
   },
   {
     id: uuidv4(),
     img: sm,
+    alt:"Best Website Builders",
     title: 'Digital Marketing',
     desc: 'Implementing innovative digital strategies to increase online visibility, drive traffic, and boost conversions through SEO, PPC, and social media marketing. Our data-driven approach ensures measurable results and continuous improvement. We create customized marketing campaigns tailored to your specific goals, leveraging analytics to optimize performance and maximize ROI.',
   },
 ];
 
 const team = [
-  { img: jayanth, name: 'Jayanth', role: 'Founder' },
+  { img: jayanth, name: 'Jayanth', role: 'Founder, CEO' },
   { img: shifali, name: 'Shifali U', role: 'UI/UX' },
   { img: tanvi, name: 'Tanvi', role: 'Frontend Developer' },
   { img: sadhana, name: 'Sadhana', role: 'Frontend developer' },
   { img: yakshith, name: 'Yakshith', role: 'UI/UX' },
   { img: tiru, name: 'Tirumalehsa E', role: 'Full stack developer' },
+  { img: Kishore, name: 'Kishore', role: 'Full stack developer' },
+  { img: Prithvin, name: 'Prithvin', role: 'Software Developer' },
 ];
 
 const project_page = [
   {
     img: holi,
+    alt:"E-commerce Website Development",
     title: 'HOLIDEVISER',
     desc: 'Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains.',
     button: {
@@ -143,6 +156,7 @@ const project_page = [
   },
   {
     img: blue,
+     alt:"E-commerce Website Development",
     title: 'BLUEPRINTai',
     desc: 'Blue Print ai is to empower AI and Deep learning projects with the highest quality enriched data, enabling our clients to create smarter, more accurate, and more efficient AI systems',
     button: {
@@ -151,6 +165,7 @@ const project_page = [
   },
   {
     img: finn,
+     alt:"E-commerce Website Development",
     title: 'FINNABLE',
     desc: 'Finnable is one of the fastest growing financial technology (Fintech) start-up to help employees get hassle free loans.',
     button: {
@@ -159,6 +174,7 @@ const project_page = [
   },
   {
     img: cmm,
+     alt:"E-commerce Website Development",
     title: 'CMMGROUPS',
     desc: 'CMMGROUPS.COM is the only online career resource that offers a behind-the-scenes look at job opportunities with hundreds of companies',
     button: {
@@ -167,6 +183,7 @@ const project_page = [
   },
   {
     img: sono,
+    alt:"Custom Website Design",
     title: 'SONOVATE',
     desc: 'They built Sonovate to provide fast, flexible, tech-driven finance that fits into any business.Their people make them who they are and define how they can help their business grow.',
     button: {
@@ -175,6 +192,7 @@ const project_page = [
   },
   {
     img: frank,
+    alt:"Custom Website Design",
     title: 'FRANKBANKER',
     desc: 'FrankBanker is a platform for open dialogue on banking, fintech, and related technologies. Their mission is to share knowledge and encourage candid discussions within the industry',
     button: {
@@ -183,6 +201,7 @@ const project_page = [
   },
   {
     img: vishna,
+    alt:"Custom Website Design",
     title: 'VAISHNAVI BUILDERS AND DEVELOPERS',
     desc: 'Vaishnavi Builders & Developers is committed to delivering high-quality services to its clients by providing them with reasonable and valuable property services. ',
     button: {
@@ -191,6 +210,7 @@ const project_page = [
   },
   {
     img: boom,
+    alt:"Custom Website Design",
     title: 'BOOM BOLT',
     desc: 'Inspired by street culture, Boombolt is an experssion of freedom, a sense of belonging, and that you belong to a larger fraternity of the free minded, experience seeking, unique and original tribe.',
     button: {
@@ -199,6 +219,7 @@ const project_page = [
   },
   {
     img: cngen,
+    alt:"Custom Website Design",
     title: 'CNGEN SERVICES',
     desc: 'Cngen bridge the gap between lenders and borrowers , offering a comprehensive suite of services including fund collection, astute financial counsel, meticulous documentation, and beyond',
     button: {
@@ -207,6 +228,7 @@ const project_page = [
   },
   {
     img: india,
+    alt:"Custom Website Design",
     title: 'INDIA THERAPIST',
     desc: 'At Their Therapy Clinic, they prioritize personalized care and effective solutions, guiding individuals towards holistic well-being with compassion and expertise.',
     button: {
@@ -229,6 +251,7 @@ const project_page = [
 const blogsection = [
 	{
 		img: blog1,
+    alt:"WebSite Development Services",
 		desc: "Maximize Your Online Presence with These Tips!",
 		content1: `Search engine optimization (SEO) is the foundation of online
 							visibility. By using relevant keywords, optimizing meta tags, and
@@ -257,6 +280,7 @@ const blogsection = [
 	},
 	{
 		img: blog2,
+    alt:"Affordable Web Development",
 		desc: "Master the Art of Seamless User Experience.",
 		content1: `Search engine optimization (SEO) is the foundation of online
 							visibility. By using relevant keywords, optimizing meta tags, and
@@ -285,6 +309,7 @@ const blogsection = [
 	},
 	{
 		img: blog3,
+    alt:"Web Development",
 		desc: "Transform Your Ideas into Stunning Websites.",
 		content1: `Search engine optimization (SEO) is the foundation of online
 							visibility. By using relevant keywords, optimizing meta tags, and
@@ -313,6 +338,7 @@ const blogsection = [
 	},
 	{
 		img: blog4,
+    alt:"Affordable Web Development",
 		desc: "Web Development Made Simple and Effective.",
 		content1: `Search engine optimization (SEO) is the foundation of online
 							visibility. By using relevant keywords, optimizing meta tags, and
@@ -341,6 +367,7 @@ const blogsection = [
 	},
 	{
 		img: blog5,
+    alt:"Affordable Web Development",
 		desc: "Innovative Solutions for a Modern Web.",
 		content1: `Search engine optimization (SEO) is the foundation of online
 							visibility. By using relevant keywords, optimizing meta tags, and
