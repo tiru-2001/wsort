@@ -1,12 +1,11 @@
 @import '../../globalscss/global.scss';
 .contact_container {
-  padding: 100px 50px 400px;
+  padding: 100px 30px 400px;
   @include flex(column, null, center, 50px);
   min-height: 100vh;
   overflow: hidden;
   background: url('../../assets//images/grid.jpg') center/cover no-repeat;
   @include responsive(700px) {
-    // margin-bottom: 250px;
     padding-bottom: 500px;
   }
   @include responsive(900px) {
@@ -35,26 +34,30 @@
   h2 {
     font-size: 3rem;
     text-align: center;
+
     @include responsive(404px) {
-      font-size: 2.5rem;
+      font-size: 2.5rem; 
     }
   }
 
   @include responsive(404px) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px; 
+    padding-right: 15px; 
   }
+
   .form_section {
-    width: 80%;
+    width: 90%; 
     @include responsive(1140px) {
       width: 98%;
     }
+
     form {
       width: 100%;
       flex-wrap: wrap;
-      @include flex(row, space-between, null, 80px);
+      @include flex(row, space-between, null, 30px); 
+
       @include responsive(780px) {
-        @include flex(row, center, null, 60px);
+        @include flex(column, center, null, 20px);
       }
 
       input {
@@ -62,29 +65,34 @@
         border-radius: 40px;
         border: 0.5px solid gray;
         outline: none;
-        padding: 20px;
+        padding: 15px;
         font-size: 1.2rem;
+
         @include responsive(995px) {
           flex-basis: 40%;
         }
+
         @include responsive(404px) {
           width: 100%;
           flex-basis: 100%;
           padding: 10px;
         }
       }
+
       button {
         flex-basis: 45%;
         border-radius: 40px;
         outline: none;
-        padding: 20px;
+        padding: 15px; 
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
         border: 2px solid var(--main_color);
+
         @include responsive(995px) {
           flex-basis: 40%;
         }
+
         @include responsive(404px) {
           width: 100%;
           flex-basis: 100%;

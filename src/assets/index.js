@@ -1,5 +1,4 @@
 import bhive from './images/bhive.jpg';
-import home from './images/home.jpg';
 import wecreate from './images/wecreate.jpg';
 import logo from './images/logo.png';
 import icon from './images/icon.png';
@@ -47,8 +46,12 @@ import blog4 from './images/blog4.jpg';
 import blog5 from './images/blog5.jpg';
 import Kishore from './images/Kishore.png';
 import Prithvin from './images/Prithvin.png';
+import shailesh from './images/shailesh.png';
+import keertana from './images/keertana.png';
 export {
   yakshith,
+  shailesh,
+  keertana,
   sadhana,
   tanvi,
   shifali,
@@ -58,7 +61,6 @@ export {
   BsTransparency,
   FaPhoneAlt,
   bhive,
-  home,
   wecreate,
   logo,
   team,
@@ -97,4 +99,5 @@ export {
   blog5,
   Kishore,
   Prithvin,
-};
+ 
+}; 

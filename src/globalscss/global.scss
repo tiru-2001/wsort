@@ -1,3 +1,4 @@
+
 @mixin flex($dir, $justify, $align, $gap) {
   display: flex;
   flex-direction: $dir;
@@ -5,6 +6,7 @@
   align-items: $align;
   gap: $gap;
 }
+
 @mixin responsive($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
     @content;
