@@ -46,12 +46,17 @@ import blog4 from './images/blog4.jpg';
 import blog5 from './images/blog5.jpg';
 import Kishore from './images/Kishore.png';
 import Prithvin from './images/Prithvin.png';
+
 import shailesh from './images/shailesh.png';
 import keertana from './images/keertana.png';
+
+
+
+
 export {
+  keertana,
   yakshith,
   shailesh,
-  keertana,
   sadhana,
   tanvi,
   shifali,
