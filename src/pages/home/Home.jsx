@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import './home.scss';
 import gsap from 'gsap';
 import { v4 } from 'uuid';
@@ -11,130 +12,17 @@ import {
   BsTransparency,
   FaPeopleCarry,
   FaSackDollar,
-  // herobg1,
-  // herobg2,
 } from '../../assets/index';
-gsap.registerPlugin(ScrollTrigger);
-const Home = () => {
-  useGSAP(() => {
-    let t1 = gsap.timeline();
-    // gsap.to('.top_left', {
-    //   x: -800,
-    //   ease: 'power3.out',
-    //   scrollTrigger: {
-    //     trigger: '.top_left',
-    //     start: 'top 1%',
-    //     end: 'top -20%',
-    //     scrub: 1,
-    //   },
-    // });
 
-    // gsap.to(".top_right", {
-		// 	x: 800,
-		// 	ease: "power3.out",
-		// 	scrollTrigger: {
-		// 		trigger: ".top_right",
-		// 		start: "top 1%",
-		// 		end: "top -20%",
-		// 		scrub: 1,
-		// 	},
-		// });
-    // gsap.fromTo(".home_section1 .bottom h1", {
-    //   opacity: 0,
-    //   duration: 2, 
-    //   ease: "power2.out"
-    // }, {
-    //   opacity: 1, 
-    //   duration: 2,
-    //   delay:1, 
-    //   scrollTrigger: {
-    //     trigger: ".home_section1 .bottom h1",
-    //     start: "top 80%",
-    //     end: "top 30%",
-    //     scrub: true,
-    //     onLeave: () => {
-    //       gsap.to(".home_section1 .bottom h1", { opacity: 0, duration: 1 });
-    //     }
-    //   }
-    // });
-    
-    // ScrollTrigger.create({
-    //   trigger: ".home_section1 .bottom p",
-    //   start: "top 70%",  
-    //   onEnter: () => {
-    //     new TypeIt(".home_section1 .bottom p", {
-    //       speed: 40,     
-    //       waitUntilVisible: true,  
-    //     }).go();
-    //   }
-    // });
-    gsap.from(".home_section1 .bottom p",{
-      x:-900,
-      opacity:0,
-      duration:2,
-      delay:0.3,
-      ease:"power2.inout",
-      // scrollTrigger: {
-      //   trigger: '.home_section1 .bottom p',
-      //   start: 'top 99%',
-      //   end: 'top 1%',
-      //   scrub: 2,
-      //   toggleActions: 'play reverse play reverse', 
-      //   yoyo: true,
-      // },
-    })
-		gsap.from(".team_image", {
-			x: -900,
-			duration: 1,
-			ease: "power1.inOut",
-			scrollTrigger: {
-				trigger: ".team_image",
-				start: "top 95%",
-				end: "top 50%",
-				scrub: 2,
-			},
-		});
-    gsap.from('.home_section3_right', {
-      x: 500,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: '.home_section3_right',
-        start: 'top 60%',
-        end: 'top 30%',
-        scrub: 2,
-      },
-    });
-    t1.from('.home_section4 h1', {
-      x: 300,
-      opacity: 0,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: '.home_section4 h1',
-        start: 'top 95%',
-        end: 'top 20%',
-        scrub: 2,
-      },
-    });
-    t1.from('.item_container', {
-      y: 150,
-      opacity: 0,
-      stagger: 1,
-      duration: 1,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: '.item_container',
-        start: 'top 95%',
-        end: 'top 20%',
-        scrub: 2,
-      },
-    });
-  });
-  const collaboration = [
+gsap.registerPlugin(ScrollTrigger);
+
+const Home = () => {
+  const collaboration = React.useMemo(() => [
     {
       id: v4(),
       icon: <FaPhoneAlt className="icon" />,
       title: 'Regular Communication',
-      desc: 'we establish open lines of communication through emails, phone calls, video conferences, or in-person meetings.',
+      desc: 'We establish open lines of communication through emails, phone calls, video conferences, or in-person meetings.',
     },
     {
       id: v4(),
@@ -152,9 +40,71 @@ const Home = () => {
       id: v4(),
       icon: <FaPeopleCarry className="icon" />,
       title: 'Understanding your needs',
-      desc: 'We understand your goal,preferences,timelines,deliverables and come out with optimized solution',
+      desc: 'We understand your goals, preferences, timelines, deliverables and provide optimized solutions.',
     },
-  ];
+  ], []);
+
+  useGSAP(() => {
+    let t1 = gsap.timeline();
+
+    gsap.from(".home_section1 .bottom p", {
+      x: -900,
+      opacity: 0,
+      duration: 2,
+      delay: 0.3,
+      ease: "power2.inOut",
+    });
+
+    gsap.from(".team_image", {
+      x: -900,
+      duration: 1,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".team_image",
+        start: "top 95%",
+        end: "top 50%",
+        scrub: 2,
+      },
+    });
+
+    gsap.from('.home_section3_right', {
+      x: 500,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: '.home_section3_right',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: 2,
+      },
+    });
+
+    t1.from('.home_section4 h1', {
+      x: 300,
+      opacity: 0,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: '.home_section4 h1',
+        start: 'top 95%',
+        end: 'top 20%',
+        scrub: 2,
+      },
+    });
+
+    t1.from('.item_container', {
+      y: 150,
+      opacity: 0,
+      stagger: 1,
+      duration: 1,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: '.item_container',
+        start: 'top 95%',
+        end: 'top 20%',
+        scrub: 2,
+      },
+    });
+  });
+
   return (
     <>
       <Helmet>
@@ -164,7 +114,6 @@ const Home = () => {
           content="Websort provides top-quality IT solutions, including web development, software development, and IT consulting services. Discover how we can help your business thrive."
         />
 
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -175,11 +124,7 @@ const Home = () => {
           content="Websort provides top-quality IT solutions, including web development, software development, and IT consulting services. Discover how we can help your business thrive."
         />
         <meta property="og:url" content="https://www.thewebsort.com/" />
-
-        {/* Canonical Link */}
         <link rel="canonical" href="https://www.thewebsort.com/" />
-
-        {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Websort" />
         <meta
@@ -190,16 +135,8 @@ const Home = () => {
 
       <section className="home">
         <section className="home_section1">
-          <section className="top">
-            {/* <section className="top_left">
-              <img src={herobg1} alt="herobg1" />
-            </section>
-            <section className="top_right">
-              <img src={herobg2} alt="herobg2" />
-            </section> */}
-          </section>
           <section className="bottom">
-            <h1>Websort-Your Premier Web Development and Design Partner</h1>
+            <h2>Websort-Your Premier Web Development and Design Partner</h2>
             <p>
               At WebSort, we are passionate about crafting exceptional digital
               experiences. Whether you're a startup looking to establish a
@@ -209,31 +146,31 @@ const Home = () => {
             </p>
           </section>
         </section>
+
         <section className="home_section2">
           <h1>We Provide the Best-Services for you</h1>
           <section className="section2_subsection">
-            {services.map((item) => {
-              return (
-                <section key={item.id} className="service_items">
-                  <section className="top">
-                    <section className="top_top">
-                      <img src={item.img} alt={item.alt} />
-                    </section>
-                    <section className="top_bottom">
-                      <h1 className="heading_font">{item.title}</h1>
-                    </section>
+            {services.map((item) => (
+              <section key={item.id} className="service_items">
+                <section className="top">
+                  <section className="top_top">
+                    <img src={item.img} alt={item.alt} loading="lazy" />
+                  </section>
+                  <section className="top_bottom">
+                    <h1 className="heading_font">{item.title}</h1>
                   </section>
                 </section>
-              );
-            })}
+              </section>
+            ))}
           </section>
         </section>
+
         <section className="home_section3">
           <section className="left">
-            <img className="team_image" src={team} alt="image" />
+            <img className="team_image" src={team} alt="Team" loading="lazy" />
           </section>
           <section className="right home_section3_right">
-            <h1> Synergy Architects</h1>
+            <h1>Synergy Architects</h1>
             <p>
               Our Synergy Architects blend creativity and collaboration to craft
               cutting-edge software solutions. United by a common goal, we
@@ -244,21 +181,19 @@ const Home = () => {
         </section>
 
         <section className="home_section4">
-          <h1>how we collaborate</h1>
+          <h1>How We Collaborate</h1>
           <section className="bottom">
-            {collaboration.map((item) => {
-              return (
-                <section key={item.id} className="item_container">
-                  <section className="item">
-                    <section className="left">{item.icon}</section>
-                    <section className="right">
-                      <h2>{item.title}</h2>
-                      <p>{item.desc}</p>
-                    </section>
+            {collaboration.map((item) => (
+              <section key={item.id} className="item_container">
+                <section className="item">
+                  <section className="left">{item.icon}</section>
+                  <section className="right">
+                    <h2>{item.title}</h2>
+                    <p>{item.desc}</p>
                   </section>
                 </section>
-              );
-            })}
+              </section>
+            ))}
           </section>
         </section>
       </section>

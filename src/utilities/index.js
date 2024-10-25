@@ -1,6 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import {
   shailesh,
+
+  keertana,
+
   bhive,
   wecreate,
   ui,
@@ -141,13 +144,18 @@ const services_page = [
 
 const team = [
   { img: jayanth, name: 'Jayanth', role: 'Founder, CEO' },
-  { img: shifali, name: 'Shifali U', role: 'UI/UX' },
-  { img: tanvi, name: 'Tanvi', role: 'Frontend Developer' },
-  { img: sadhana, name: 'Sadhana', role: 'Frontend developer' },
-  { img: yakshith, name: 'Yakshith', role: 'UI/UX' },
+  { img: Prithvin, name: 'Prithvin', role: 'Software Developer' },
   { img: tiru, name: 'Tirumalehsa E', role: 'Full stack developer' },
   { img: Kishore, name: 'Kishore', role: 'Full stack developer' },
+
+  { img: tanvi, name: 'Tanvi', role: 'Frontend Developer' },
+  { img: sadhana, name: 'Sadhana', role: 'Frontend developer' },
+  { img: keertana, name: 'Keertana V', role: 'Frontend developer' },
+  { img: shifali, name: 'Shifali U', role: 'UI/UX Designer' },
+  { img: yakshith, name: 'Yakshith', role: 'UI/UX Designer' },
+
   { img: Prithvin, name: 'Prithvin', role: 'Software Developer' },
+
   { img: shailesh, name: 'Shailesh I Naik', role: 'Marketing analyst' },
 ];
 
