@@ -145,8 +145,8 @@ const team = [
   { img: Prithvin, name: 'Prithvin', role: 'Software Developer' },
   { img: tiru, name: 'Tirumalehsa E', role: 'Full stack developer' },
   { img: Kishore, name: 'Kishore', role: 'Full stack developer' },
-  { img: tanvi, name: 'Tanvi', role: 'Frontend Developer' },
-  { img: sadhana, name: 'Sadhana', role: 'Frontend developer' },
+
+
   { img: keertana, name: 'Keertana V', role: 'Frontend developer' },
   { img: shifali, name: 'Shifali U', role: 'UI/UX Designer' },
   { img: yakshith, name: 'Yakshith', role: 'UI/UX Designer' },
