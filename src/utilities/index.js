@@ -143,7 +143,7 @@ const services_page = [
 const team = [
   { img: jayanth, name: 'Jayanth', role: 'Founder, CEO' },
   { img: Prithvin, name: 'Prithvin', role: 'Software Developer' },
-  { img: tiru, name: 'Tirumalehsa E', role: 'Full stack developer' },
+  { img: tiru, name: 'Tirumalesha E', role: 'Full stack developer' },
   { img: Kishore, name: 'Kishore', role: 'Full stack developer' },
 
 
